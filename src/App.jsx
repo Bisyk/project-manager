@@ -7,7 +7,7 @@ function App() {
   const [projects, setProjects] = useState(localProjects);
   const [newProjectIsActive, setNewProjectIsActive] = useState(false);
   const [activeProject, setActiveProject] = useState(null);
-  const [activeProjectTasks, setActiveProjectTasks] = useState(null);
+  const [activeProjectTasks, setActiveProjectTasks] = useState([]);
 
   useEffect(() => {
     localStorage.setItem("projects", JSON.stringify(projects));
@@ -32,7 +32,7 @@ function App() {
     updatedProjects.unshift(project);
     setActiveProject(project);
     setProjects(updatedProjects);
-    setActiveProjectTasks(null);
+    setActiveProjectTasks([]);
   };
 
   return (

@@ -54,7 +54,7 @@ export default function ProjectView({
     setProjects(updatedProjects);
     setActiveProjectTasks(updatedActiveProjectTasks);
   };
-
+  console.log(activeProjectTasks)
   return (
     <>
       <Modal ref={modalRef} buttonCaption="Ok">
