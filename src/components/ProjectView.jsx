@@ -16,7 +16,7 @@ export default function ProjectView({
   const projectIndex = projects.indexOf(project);
 
   const handleAddTask = () => {
-    if (taskRef.current.value.trim()===''){
+    if (taskRef.current.value.trim() === "") {
       modalRef.current.open();
       return;
     }
@@ -57,15 +57,20 @@ export default function ProjectView({
 
   return (
     <>
-    <Modal ref={modalRef} buttonCaption="Ok">
-      <p>It's impossible to add empty task</p>
-    </Modal>
+      <Modal ref={modalRef} buttonCaption="Ok">
+        <p>It's impossible to add empty task</p>
+      </Modal>
       <div className=" flex flex-col  w-3/5 mt-24">
         <div className="flex justify-between">
           <h1 className="text-stone-900 font-bold text-4xl pb-2">
             {project.title}
           </h1>
-          <button className=" hover:text-rose-500" onClick={handleDeleteProject}>Delete</button>
+          <button
+            className=" hover:text-rose-500"
+            onClick={handleDeleteProject}
+          >
+            Delete
+          </button>
         </div>
         <p className="text-stone-500 pb-4 ">{project.date}</p>
         <p className="text-l border-b-4 border-y-stone-400 mb-4 whitespace-pre-wrap">

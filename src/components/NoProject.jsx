@@ -1,5 +1,5 @@
 import DefaultButton from "../ui/DefaultButton";
-import NoProjectImage from '../assets/noprojects.png'
+import NoProjectImage from "../assets/noprojects.png";
 
 export default function NoProject({ handleNewProjectWindow }) {
   return (

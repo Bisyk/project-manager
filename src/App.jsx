@@ -30,9 +30,9 @@ function App() {
   const handleSetProjects = (project) => {
     const updatedProjects = [...projects];
     updatedProjects.unshift(project);
-    setActiveProject(project)
+    setActiveProject(project);
     setProjects(updatedProjects);
-    setActiveProjectTasks(null)
+    setActiveProjectTasks(null);
   };
 
   return (
